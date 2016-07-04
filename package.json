@@ -1,19 +1,39 @@
 {
   "name": "fs-api",
   "version": "0.1.0",
-  "description": "An API for managing recipes and related data on a per-user basis.",
-  "main": "index.js",
+  "description": "A Client/Server app for managing recipes and related data on a per-user basis.",
+  "main": "fs.js",
   "scripts": {
-    "start": ""
+    "start": "nodemon ./fs.js",
+    "sass": "node ./scripts/sass.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/caltemose/fs-api.git"
+    "url": "git+https://github.com/caltemose/fs-api-ui.git"
   },
   "author": "Chad L. Altemose",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/caltemose/fs-api/issues"
+    "url": "https://github.com/caltemose/fs-api-ui/issues"
   },
-  "homepage": "https://github.com/caltemose/fs-api#readme"
+  "homepage": "https://github.com/caltemose/fs-api-ui#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "~4.1.1",
+    "express-session": "~1.0.0",
+    "method-override": "~1.0.0",
+    "mongoose": "^4.5.2",
+    "morgan": "~1.0.0",
+    "passport": "^0.3.2",
+    "passport-google-oauth": "^1.0.0",
+    "pug": "^2.0.0-beta3"
+  },
+  "devDependencies": {
+    "fs-extra": "^0.30.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
+  }
 }
