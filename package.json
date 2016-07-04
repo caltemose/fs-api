@@ -1,0 +1,19 @@
+{
+  "name": "fs-api",
+  "version": "0.1.0",
+  "description": "An API for managing recipes and related data on a per-user basis.",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caltemose/fs-api.git"
+  },
+  "author": "Chad L. Altemose",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/caltemose/fs-api/issues"
+  },
+  "homepage": "https://github.com/caltemose/fs-api#readme"
+}
