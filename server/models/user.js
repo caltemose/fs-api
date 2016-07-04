@@ -1,12 +1,19 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-var createdDate = require('../utils/createdDate');
+// var createdDate = require('../utils/createdDate');
 
 var userSchema = mongoose.Schema({
-    meta: {
-        email: String,
-        name: String,
-        created: Date.now
+    email: String,
+    username: String,
+    created: {
+        type: Date,
+        default: Date.now
+    },
+    // role/permissions
+    role: {
+        type: String,
+        enum: ["limbo", "user", "admin"],
+        default: "limbo"
     },
     // local auth strategy
     local: {
