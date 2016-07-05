@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+block content
+    h1 Users
+
+    if err
+        p.flash-message= err
+
+    if users
+        ul
+            each user in users
+                li #{user.role} | #{user.email} | #{user.username}

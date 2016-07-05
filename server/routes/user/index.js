@@ -2,8 +2,8 @@ var auth = require('../../helpers/auth');
 
 module.exports = function (app, passport) {
 
-    app.get('/profile', auth.requireUser, function (res, req) {
-        res.render('profile');
+    app.get('/profile', auth.requireAuthenticated, function (req, res) {
+        res.render('user/profile');
     });
 
 }

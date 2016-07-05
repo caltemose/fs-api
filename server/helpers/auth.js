@@ -7,6 +7,7 @@ module.exports = {
     requireUser: function (req, res, next) {
         if (req.isAuthenticated() && req.user.role !== 'limbo')
             return next();
+        
         res.redirect('/');
     },
 

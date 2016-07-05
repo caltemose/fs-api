@@ -8,7 +8,7 @@ module.exports = function (app, passport) {
             res.locals.isAuthenticated = true;
             res.locals.user = {
                 email: req.user.email,
-                username: req.user.username
+                username: req.user.username,
                 role: req.user.role
             }
         }
@@ -38,5 +38,11 @@ module.exports = function (app, passport) {
 
     // authentication routes
     require('./auth')(app, passport);
+
+    // admin routes
+    require('./admin')(app, passport);
+
+    // user routes
+    require('./user')(app, passport);
 
 }

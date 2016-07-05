@@ -3,22 +3,30 @@ extends ../layouts/default
 block content
     h1 User Profile
 
-    h2 Local Account Info:
+    if user.role === 'limbo'
+        p Your account has not been activated by an administrator. Until then it will be inactive.
 
-    ul.profile-info
-        li
-            | id:
-            = ' '
-            span= user._id
-        li
-            | email:
-            = ' '
-            span= user.email
-        li
-            | username:
-            = ' '
-            span= user.username
-            
+    else
+        h2 Local Account Info:
+
+        ul.profile-info
+            li
+                | id:
+                = ' '
+                span= user._id
+            li
+                | email:
+                = ' '
+                span= user.email
+            li
+                | username:
+                = ' '
+                span= user.username
+            li
+                | role:
+                = ' '
+                span= user.role
+
         //- li
         //-     a(href="/unlink/local") Unlink
         //-     = ' | '

@@ -19,6 +19,8 @@ html
                 if isAuthenticated
                     a(href="/profile") Profile
                     a(href="/logout") Logout
+                    if user.role === 'admin'
+                        a(href="/admin/users") Users
                 else
                     a(href="/login") Login
                     a(href="/signup") Signup
