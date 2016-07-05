@@ -1,4 +1,4 @@
-# fs-api
+# fs-api-ui
 
 A Client/Server app for managing recipes and related data on a per-user basis.
 
